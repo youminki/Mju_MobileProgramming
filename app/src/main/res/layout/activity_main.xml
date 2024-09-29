@@ -1,54 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="20dp"
     android:gravity="center"
-    android:background="#FFEBEE">
+    android:background="#FFEFFF">
 
-    <!-- Button 1 -->
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="버튼1"
-        android:layout_margin="20dp"
-        android:background="#673AB7"
-        android:textColor="#FFFFFF" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
-    <!-- TextView -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="여긴 텍스트뷰입니다"
-        android:textColor="#FF0000"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:background="#76FF03"
-        android:gravity="center"
-        android:layout_margin="20dp" />
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#673AB7"
+            android:text="버튼1"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
 
-    <!-- Button 2 -->
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="버튼2"
-        android:layout_margin="20dp"
-        android:background="#673AB7"
-        android:textColor="#FFFFFF" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#76FF03"
+            android:text="여긴 텍스트뷰입니다"
+            android:textColor="#FF0000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
 
-    <!-- Button 3 (Deactivated) -->
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="버튼3"
-        android:layout_margin="20dp"
-        android:background="#BDBDBD"
-        android:enabled="false"
-        android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#673AB7"
+            android:text="버튼2"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            tools:ignore="VisualLintButtonSize" />
+
+        <!-- Button 3 -->
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_margin="20dp"
+            android:background="#545454"
+            android:enabled="false"
+            android:text="버튼3"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+    </LinearLayout>
 
 </LinearLayout>
