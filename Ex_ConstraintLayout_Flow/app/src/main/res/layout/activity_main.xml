@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="chain"
+        app:constraint_referenced_ids="Btn1,Btn2,Btn3,Btn4,Btn5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/Btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUTTON1" />
+
+    <Button
+        android:id="@+id/Btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUTTON2" />
+
+    <Button
+        android:id="@+id/Btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUTTON3" />
+
+    <Button
+        android:id="@+id/Btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUTTON4" />
+
+    <Button
+        android:id="@+id/Btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUTTON5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
