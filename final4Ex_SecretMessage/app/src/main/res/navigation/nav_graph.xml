@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.final4ex_secretmessage.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_messageFragment"
+            app:destination="@id/messageFragment"
+            app:popUpTo="@id/messageFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.final4ex_secretmessage.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_messageFragment_to_encryptFragment"
+            app:destination="@id/encryptFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/encryptFragment"
+        android:name="com.example.final4ex_secretmessage.EncryptFragment"
+        android:label="fragment_encrypt"
+        tools:layout="@layout/fragment_encrypt">
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/anotherFragment"
+        android:name="com.example.final4ex_secretmessage.AnotherFragment"
+        android:label="AnotherFragment"
+        tools:layout="@layout/fragment_another">
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_messageFragment_to_anotherFragment"
+        app:destination="@id/anotherFragment"
+        app:popUpTo="@id/welcomeFragment"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_encryptFragment_to_anotherFragment"
+        app:destination="@id/anotherFragment"
+        app:popUpTo="@id/messageFragment"
+        app:popUpToInclusive="true" />
+
+
+
+
+</navigation>
